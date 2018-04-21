@@ -9703,23 +9703,27 @@ h1 { margin: 0px; height: 91px; }
 .generateseedarea-inner .label-padding {
 	padding: 20px;
 }
-#getprivkeysarea .label {
+#getprivkeysarea .label,
+#getbip39keysarea .label {
 	text-align: left;
 	font-weight: bold;
 	display: block;
 	margin-bottom: 15px;
 }
-.getprivkeysarea-inner {
+.getprivkeysarea-inner,
+.getbip39keysarea-inner {
 	text-align: left;
 	width: 80%;
 	margin: 0 auto;
 	padding: 35px 0;
 }
-.getprivkeysarea-inner-res {
+.getprivkeysarea-inner-res,
+.getbip39keysarea-inner-res {
 	display: none;
 	margin-top: 30px;
 }
-.getprivkeysarea-seed {
+.getprivkeysarea-seed,
+.getbip39keysarea-seed {
 	display: block;
 	width: 650px;
 	padding: 5px;
@@ -9728,17 +9732,32 @@ h1 { margin: 0px; height: 91px; }
 .default-text {
 	font-size: 14px;
 }
-.getprivkeysarea-select {
+.getprivkeysarea-select,
+.getbip39keysarea-select {
 	margin: 0 10px;
 }
-.getprivkeysarea-inner-res-msg-item-col {
+.getprivkeysarea-inner-res-msg-item-col,
+.getbip39keysarea-inner-res-msg-item-col {
 	margin: 10px 0;
 }
-.getprivkeysarea-inner-res-msg-item-col strong {
+.getprivkeysarea-inner-res-msg-item-col strong,
+.getbip39keysarea-inner-res-msg-item-col strong {
 	margin-right: 5px;
 }
-.getprivkeysarea-inner-res-msg-item-col.last {
+.getprivkeysarea-inner-res-msg-item-col.last,
+.getbip39keysarea-inner-res-msg-item-col.last {
 	margin-bottom: 35px;
+}
+.getprivkeysarea-selectors {
+	width: 300px;
+	margin-bottom: 20px;
+}
+.getprivkeysarea-selectors span {
+	width: 70%;
+  display: inline-block;
+}
+.label.small {
+	font-size: 14px;
 }
   </style>
 </head>
@@ -9770,17 +9789,92 @@ h1 { margin: 0px; height: 91px; }
 			<div class="tab i18n" id="detailwallet" onclick="ninja.tabSwitch(this);">Wallet Details</div>
 			<div class="tab i18n" id="decryptseed" onclick="ninja.tabSwitch(this);">Decrypt seed</div>
 			<div class="tab i18n" id="generateseed" onclick="ninja.tabSwitch(this);">Generate seed</div>
-			<div class="tab i18n" id="getprivkeys" onclick="ninja.tabSwitch(this);">Get priv keys</div>
+			<div class="tab i18n" id="getprivkeys" onclick="ninja.tabSwitch(this);">Seed priv keys</div>
+			<div class="tab i18n" id="getbip39keys" onclick="ninja.tabSwitch(this);">bip39 keys</div>
     </div>
 
     <div id="wallets">
+			<div id="getbip39keysarea" class="walletarea">
+				<div class="getbip39keysarea-inner">
+					<span class="label i18n">Provide your Ledger or any other bip39 compatible seed to retrieve KMD private keys</span>
+					<span class="label small i18n">Note: key search is a resource intensive operation. Please use small increments when choosing selector options. Otherwise it may result in browser hang for a long period of time.</span>
+					<input type="password" id="getbip39keysarea-seed" class="getbip39keysarea-seed" value="" placeholder="Enter your seed here" autocomplete="off" onfocus="this.select();">
+					<input type="text" id="getbip39keysarea-search" class="getbip39keysarea-seed" value="" placeholder="Enter a KMD address to search for" autocomplete="off" onfocus="this.select();">
+					<div class="getprivkeysarea-selectors">
+						<span class="default-text">Number of accounts</span>
+						<select id="getprivkeysarea-select-accounts-count" class="getprivkeysarea-select" value="2">
+							<option value="2">2</option>
+							<option value="3">3</option>
+							<option value="4">4</option>
+							<option value="5">5</option>
+							<option value="6">6</option>
+							<option value="7">7</option>
+							<option value="8">8</option>
+							<option value="9">9</option>
+							<option value="10">10</option>
+						</select>
+					</div>
+					<div class="getprivkeysarea-selectors">
+						<span class="default-text">Number of addresses</span>
+						<select id="getprivkeysarea-select-addresses-count" class="getprivkeysarea-select" value="2">
+							<option value="2">2</option>
+							<option value="3">3</option>
+							<option value="4">4</option>
+							<option value="5">5</option>
+							<option value="6">6</option>
+							<option value="7">7</option>
+							<option value="8">8</option>
+							<option value="9">9</option>
+							<option value="10">10</option>
+						</select>
+					</div>
+					<div class="getprivkeysarea-selectors">
+						<span class="default-text">Number of accounts offset</span>
+						<select id="getprivkeysarea-select-accounts-count-offset" class="getprivkeysarea-select" value="0">
+							<option value="0">0</option>
+							<option value="1">1</option>
+							<option value="2">2</option>
+							<option value="3">3</option>
+							<option value="4">4</option>
+							<option value="5">5</option>
+							<option value="6">6</option>
+							<option value="7">7</option>
+							<option value="8">8</option>
+							<option value="9">9</option>
+							<option value="10">10</option>
+						</select>
+					</div>
+					<div class="getprivkeysarea-selectors">
+						<span class="default-text">Number of addresses offset</span>
+						<select id="getprivkeysarea-select-addresses-count-offset" class="getprivkeysarea-select" value="0">
+							<option value="0">0</option>
+							<option value="1">1</option>
+							<option value="2">2</option>
+							<option value="3">3</option>
+							<option value="4">4</option>
+							<option value="5">5</option>
+							<option value="6">6</option>
+							<option value="7">7</option>
+							<option value="8">8</option>
+							<option value="9">9</option>
+							<option value="10">10</option>
+						</select>
+					</div>
+					<input type="button" value="Get priv keys" onclick="ninja.wallets.getbip39keys.get();">
+					<div id="getbip39keysarea-inner-res" class="getbip39keysarea-inner-res">
+						<hr />
+						<div id="getbip39keysarea-inner-res-msg" class="getbip39keysarea-inner-res-msg"></div>
+					</div>
+				</div>
+			</div>
+
 			<div id="getprivkeysarea" class="walletarea">
 				<div class="getprivkeysarea-inner">
 					<span class="label i18n">Provide your Agama/BarterDEX seed to retrieve private keys</span>
 					<input type="password" id="getprivkeysarea-seed" class="getprivkeysarea-seed" value="" placeholder="Enter your seed here" autocomplete="off" onfocus="this.select();">
-					<span class="default-text">Coin</span> <select id="getprivkeysarea-select" class="getprivkeysarea-select" value={ this.state.accounts }></select>
+					<span class="default-text">Coin</span> <select id="getprivkeysarea-select" class="getprivkeysarea-select"></select>
 					<input type="button" id="encryptedseeddecrypt" value="Get priv keys" onclick="ninja.wallets.getprivkeys.get();">
-					<div id="getprivkeysarea-inner-res" class="getprivkeysarea-inner-res">					
+					<div id="getprivkeysarea-inner-res" class="getprivkeysarea-inner-res">
 						<hr />
 						<div id="getprivkeysarea-inner-res-msg" class="getprivkeysarea-inner-res-msg"></div>
 					</div>
@@ -9793,7 +9887,7 @@ h1 { margin: 0px; height: 91px; }
 					<textarea rows="20" cols="120" id="encryptedseed"></textarea>
 					<input type="password" id="encryptedseedkey" value="" placeholder="Enter a decryption key here" autocomplete="off" onfocus="this.select();">
 					<input type="button" id="encryptedseeddecrypt" value="Decrypt" onclick="ninja.wallets.decryptseed.decode();">
-					<div id="decryptseedarea-inner-res" class="decryptseedarea-inner-res">					
+					<div id="decryptseedarea-inner-res" class="decryptseedarea-inner-res">
 						<hr />
 						<div id="decryptseedarea-inner-res-msg" class="decryptseedarea-inner-res-msg"></div>
 					</div>
@@ -9806,10 +9900,10 @@ h1 { margin: 0px; height: 91px; }
 					<div class="generateseedarea-seed-type">
 							<input type="radio" id="seedtype1" name="seedtype" value="seedtype1" checked="checked" onClick="ninja.wallets.generateseed.generate(256)">
 							<label for="seedtype1">Agama/BarterDEX (256-bit)</label>
-				
+
 							<input type="radio" id="seedtype2" name="seedtype" value="seedtype2" onClick="ninja.wallets.generateseed.generate(160)">
 							<label for="seedtype2">Waves (160-bit)</label>
-					
+
 							<input type="radio" id="seedtype3" name="seedtype" value="seedtype3" onClick="ninja.wallets.generateseed.generate(128)">
 							<label for="seedtype3">NXT (128-bit)</label>
 					</div>
@@ -9817,7 +9911,7 @@ h1 { margin: 0px; height: 91px; }
 					<div class="generateseedarea-seed" id="generateseedarea-seed"></div>
 				</div>
 			</div>
-			
+
 			<div id="singlearea" class="walletarea">
 
         <div id="initBanner">
@@ -11352,6 +11446,63 @@ ninja.wallets.singlewallet = {
 };
 	</script>
 	<script src="agamalib.js"></script>
+	<!-- bip39 priv keys -->
+	<script type="text/javascript">
+		ninja.wallets.getbip39keys = {
+			open: function () {
+				document.getElementById("getbip39keysarea").style.display = "block";
+				//document.getElementById("btcnet-kmd").selected = true;
+			},
+			get: function() {
+				var seed = document.getElementById("getbip39keysarea-seed").value;
+				var searchPattern = document.getElementById("getbip39keysarea-search").value;
+
+				if (searchPattern) {
+					var res = agama.keys.bip39Search(
+						seed,
+						agama.btcnetworks.kmd,
+						searchPattern,
+						document.getElementById("getprivkeysarea-select-addresses-count").value,
+						document.getElementById("getprivkeysarea-select-accounts-count").value,
+						true,
+						document.getElementById("getprivkeysarea-select-addresses-count-offset").value,
+						document.getElementById("getprivkeysarea-select-accounts-count-offset").value
+					);
+
+					if (res &&
+							res.priv) {
+						var htmlOut = '<div class="getprivkeysarea-inner-res-msg-item">' +
+							'<div class="getprivkeysarea-inner-res-msg-item-col">' +
+								'<strong>Pub </strong>' + res.pub +
+							'</div>' +
+							'<div class="getprivkeysarea-inner-res-msg-item-col last">' +
+								'<strong>Priv </strong>' + res.priv +
+							'</div>' +
+						'</div>';
+						document.getElementById("getbip39keysarea-inner-res-msg").innerHTML = htmlOut;
+					} else {
+						document.getElementById("getbip39keysarea-inner-res-msg").innerHTML = 'Unable to find address ' + searchPattern + ', please check pub key and seed are correct or try incrementing selector options.';
+					}
+					document.getElementById("getbip39keysarea-inner-res").style.display = "block";
+				}/* else {
+					var htmlOut = [];
+
+					for () {
+						htmlOut.push(
+						);
+					}
+
+					document.getElementById("getbip39keysarea-inner-res-msg").innerHTML = htmlOut.join('');
+					document.getElementById("getbip39keysarea-inner-res").style.display = "block";
+				}*/
+			},
+			close: function () {
+				document.getElementById("getbip39keysarea").style.display = "none";
+				document.getElementById("getbip39keysarea-inner-res-msg").innerHTML = '';
+				document.getElementById("getbip39keysarea-inner-res").style.display = "none";
+			},
+		};
+	</script>
 	<!-- get priv keys -->
 	<script type="text/javascript">
 		ninja.wallets.getprivkeys = {
@@ -11375,7 +11526,7 @@ ninja.wallets.singlewallet = {
 				if (seed) {
 					if (option !== 'all') {
 						var _keys = agama.keys.seedToWif(seed, agama.btcnetworks[option], true);
-						
+
 						document.getElementById("getprivkeysarea-inner-res").style.display = "block";
 						document.getElementById("getprivkeysarea-inner-res-msg").innerHTML = '<div class="getprivkeysarea-inner-res-msg-item">' +
 							'<div class="getprivkeysarea-inner-res-msg-item-col">' +
@@ -11412,9 +11563,9 @@ ninja.wallets.singlewallet = {
 				}
 			},
 			close: function () {
-				document.getElementById("getprivkeysarea-inner-res-msg").innerHTML = '';				
+				document.getElementById("getprivkeysarea-inner-res-msg").innerHTML = '';
 				document.getElementById("getprivkeysarea").style.display = "none";
-				document.getElementById("getprivkeysarea-inner-res").style.display = "block";
+				document.getElementById("getprivkeysarea-inner-res").style.display = "none";
 			},
 		};
 	</script>
@@ -11445,7 +11596,6 @@ ninja.wallets.singlewallet = {
 	</script>
 	<!-- decrypt seed -->
 	<script type="text/javascript">
-		console.warn(agama);
 		ninja.wallets.decryptseed = {
 			open: function () {
 				document.getElementById("decryptseedarea").style.display = "block";
