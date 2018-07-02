@@ -9727,32 +9727,32 @@ h1 { margin: 0px; height: 91px; }
         <div id="singlesafety">
           <div class="firstHalfSingleSafety">
 
-            <h3 id="securitystep0title" class="i18n">Step 0. Follow the security checklist recommendation</h3>
+            <h3 id="securitystep0title" class="i18n">Step 1. Follow the security checklist recommendation</h3>
             <p id="securitystep0" class="i18n">
-              First step is to <strong>download</strong> this website from <a href="https://github.com/MichaelMure/PaperWallet/archive/master.zip">Github</a> and open the index.html file directly from your computer. It's just too easy to sneak some evil code in the 6000+ lines of javascript to leak your private key, and you don't want to see your fund stolen. Code version control make it much easier to cross-check what actually run. For extra security, <strong>unplug your Internet access</strong> while generating your wallet.
+		    First step is to <strong>download this website</strong> <a href="https://github.com/komodoservices/komodo-calc/archive/master.zip">from github</a> and open the index.html file directly on your computer.
             </p>
-            <h3 id="securitystep1title" class="i18n">Step 1. Generate new address</h3>
+            <h3 id="securitystep1title" class="i18n">Step 2. Generate a new address</h3>
             <p id="securitystep1" class="i18n">
-              Choose your currency and click on the "Generate new address" button.
+              Move your mouse around to generate a new address, or click "Generate new address".
             </p>
-            <h3 id="securitystep2title" class="i18n">Step 2. Print the Paper Wallet</h3>
+            <h3 id="securitystep2title" class="i18n">Step 3. Print out your Paper Wallet</h3>
             <p id="securitystep2" class="i18n">
-              Click the Paper Wallet tab and print the page on high quality setting. <strong>Never save the page as a PDF file to print it later since a file is more likely to be hacked than a piece of paper.</strong>
+              Click the Paper Wallet tab and print the page on high quality setting. <strong>Never save as a PDF because a file is more likely to be hacked than a piece of paper.</strong>
             </p>
-            <h3 id="securitystep3title" class="i18n">Step 3. Fold the Paper Wallet</h3>
+            <h3 id="securitystep3title" class="i18n">Step 4. Fold your Paper Wallet</h3>
             <p id="securitystep3" class="i18n">
-              Fold your new Paper wallet following the lines.
+              Fold your new Paper Wallet following the lines.
               <img src="images/foldinginstructions.png" alt="Fold in half lengthwise, and then in three widthwise." /><br />
               You can insert one side inside the other to lock the wallet.
             </p>
 
-            <h3 id="securitystep4title" class="i18n">Step 4. Share your public address</h3>
+            <h3 id="securitystep4title" class="i18n">Step 5. Share your public address</h3>
             <p id="securitystep4" class="i18n">
-              Use your public address to receive money from other crypto-currency users. You can share your public address as much as you want.
+              Use your Komodo address to receive coins from other Komodo users. You can share your public address as much as you want.
             </p>
-            <h3 id="securitystep5title" class="i18n">Step 5. Keep your private key secret</h3>
+            <h3 id="securitystep5title" class="i18n">Step 6. Keep your private key secret</h3>
             <p id="securitystep5" class="i18n">
-              The private key is literally the keys to your coins, if someone was to obtain it, they could withdraw the funds currently in the wallet, and any funds that might be deposited in that wallet.
+              The private key is literally the keys to your coins. IF someone was to obtain it, they could withdraw the funds currently in the address, and any funds to come in the future.
             </p>
             <p>
               <strong id="securitystep6" class="i18n">Please test spending a small amount before receiving any large payments.</strong><br /><br />
@@ -9782,17 +9782,12 @@ h1 { margin: 0px; height: 91px; }
         <div id="faqZone">
           <h2>Frequently asked questions :</h2>
 
-          <h3 class="faqQuestion"><a class="faqLink" onclick="ninja.toggleFaqQuestion('faqQuestion1');ninja.toggleFaqQuestion('faqQuestion1.1')">&#8226; Is it safe ?</a></h3>
+          <h3 class="faqQuestion"><a class="faqLink" onclick="ninja.toggleFaqQuestion('faqQuestion1');ninja.toggleFaqQuestion('faqQuestion1.1')">&#8226; Is it safe?</a></h3>
           <p class="faqAnswer" id="faqQuestion1">
-            We try to make it that way ! The core of the tool, that generate the keys is 99% the same as the well reviewed bitaddress.org. We only changed it to be able to generate addresses for different crypto-currencies.
-          </p>
-          <p class="faqAnswer" id="faqQuestion1.1">
-We think that having a unique generator for multiple currencies lead to a much better reviewed tool for all than having a myriad of half-backed generators.
-Changes made to this generator are available on Github in small and divided commits and those are easy to review and reuse.
-Walletgenerator.net use the same security measures as the original project. All-in-one html document, no ajax, no analytics, no external calls, no CDN that can inject anything they want. And trust us, we have seen some nasty things when reviewing some wallet generator.
-          </p>
+            We try to make it that way. The core of the tool, that generate the keys is 99% the same as the well reviewed bitaddress.org. We only changed it to be able to generate addresses for Komodo and Assetchains.
+	  </p>
 
-          <h3 class="faqQuestion"><a class="faqLink" onclick="ninja.toggleFaqQuestion('faqQuestion2');">&#8226; Why should I use a paper wallet ?</a></h3>
+          <h3 class="faqQuestion"><a class="faqLink" onclick="ninja.toggleFaqQuestion('faqQuestion2');">&#8226; Why should I use a paper wallet?</a></h3>
           <p class="faqAnswer" id="faqQuestion2">
               Advantages of a paper wallet are multiple:<br/><br/>
               <span class="faqListBullet">&#8658;</span> They are not subject to malwares and keyloggers<br/>
@@ -9800,45 +9795,39 @@ Walletgenerator.net use the same security measures as the original project. All-
               <span class="faqListBullet">&#8658;</span> You won't lose your coins when your device break
           </p>
 
-          <h3 class="faqQuestion"><a class="faqLink" onclick="ninja.toggleFaqQuestion('faqQuestion3');">&#8226; How to use a paper wallet ?</a></h3>
+          <h3 class="faqQuestion"><a class="faqLink" onclick="ninja.toggleFaqQuestion('faqQuestion3');">&#8226; How to use a paper wallet?</a></h3>
           <p class="faqAnswer" id="faqQuestion3">
-            Once you have generated and printed a wallet, you can send coins to the public address, like for any wallet. Store your paper wallet securely. It contains everything that is needed to spend your funds. Consider using BIP38 to secure your paper wallet with a password.
+            Once you have generated and printed a paper wallet, you can send coins to the Komodo address, like you woukd any other wallet. Store your paper wallet securely. It contains everything that is needed to spend your funds.
           </p>
-
-          <h3 class="faqQuestion"><a class="faqLink" onclick="ninja.toggleFaqQuestion('faqQuestion4');">&#8226; How to spend the coins stored in a paper wallet ?</a></h3>
+		
+	  <h3 class="faqQuestion"><a class="faqLink" onclick="ninja.toggleFaqQuestion('faqQuestion4');">&#8226; How can I make my paper wallet more secure?</a></h3>
           <p class="faqAnswer" id="faqQuestion4">
-            You will need to import your private key in a real client, that you can download from the currency website. The exact method to do that will depend on the client. If there is no integrated method, you can usually fall back to the debug console and use the command “importprivkey [yourprivatekey]“.
+            Consider using BIP38 to secure your paper wallet with a password. Also<strong>download and unplug your Internet access</strong> while generating your wallet.
           </p>
 
-          <h3 class="faqQuestion"><a class="faqLink" onclick="ninja.toggleFaqQuestion('faqQuestion5');">&#8226; How walletgenerator.net is different than another wallet generator ?</a></h3>
+	  <h3 class="faqQuestion"><a class="faqLink" onclick="ninja.toggleFaqQuestion('faqQuestion7');">&#8226; Why should I download and run offline?</a></h3>
           <p class="faqAnswer" id="faqQuestion5">
-            It’s not that different. You will find another design for the paper wallet and some improvements here and there. The big difference is that this is a unique project for a lot of currencies, so more people can review it and check its safety.
+            It's just too easy to sneak some evil code in the 6000+ lines of javascript to leak your private key, and you don't want to see your fund stolen. Code version control make it much easier to cross-check what actually run. For extra security, <strong>unplug your Internet access</strong> while generating your wallet.
+          </p>
+		
+          <h3 class="faqQuestion"><a class="faqLink" onclick="ninja.toggleFaqQuestion('faqQuestion5');">&#8226; How can I spend the coins stored in my paper wallets?</a></h3>
+          <p class="faqAnswer" id="faqQuestion6">
+            You can use Agama Lite Mode and login with your private key as the seed. If you are using Agama Native, Komodo-QT, or Komodod you can import it with the command “importprivkey [yourprivatekey]“.
           </p>
 
-          <h3 class="faqQuestion"><a class="faqLink" onclick="ninja.toggleFaqQuestion('faqQuestion7');">&#8226; Can you add support for cryptocurrency XYZ ?</a></h3>
+          <h3 class="faqQuestion"><a class="faqLink" onclick="ninja.toggleFaqQuestion('faqQuestion6');">&#8226; How is Komodo-Calc different than walletgenerator.net or other wallet generators?</a></h3>
           <p class="faqAnswer" id="faqQuestion7">
-            Absolutely ! To help us do that, you can <a href="https://docs.google.com/forms/d/1nPIvukVWxlaveUPEUAEhGKwvEuwJiPSgs5zc5LhDVpk/viewform">fill this  form</a>. But keep in mind that there is some currency that we cannot support. If the developers made some change in the address format, we won’t hack the crypto core of the project and take the risk to tamper the security of the others currencies.
-            You can also implement the support yourself by following this <a href="https://github.com/MichaelMure/WalletGenerator.net/wiki/How-to-add-a-new-currency">non-developer How-To</a>
+            It’s not very different! Komodo-Calc is a fork of Walletgenerator.net. The big difference is that Walletgenerator.net is a unique project for a lot of currencies, so more people can review it and check its safety.
           </p>
 
-          <h3 class="faqQuestion"><a class="faqLink" onclick="ninja.toggleFaqQuestion('faqQuestion8');">&#8226; Why should I make a donation ?</a></h3>
+          <h3 class="faqQuestion"><a class="faqLink" onclick="ninja.toggleFaqQuestion('faqQuestion7');">&#8226; I found a bug, what shall I do?</a></h3>
           <p class="faqAnswer" id="faqQuestion8">
-            Donations money are used to pay our hosting service provider, but it’ll also be used to make walletgenerator.net more secure as we plan to organize a CrowdCurity campain as soon as we get enough money to pay for it.
+            You can report bugs using issues on our <a href= "https://github.com/komodoservices/paperwallet" target="_blank">GitHub</a> or you could also make an issue on the main (<a href="https://github.com/MichaelMure/WalletGenerator.net" target="_blank">WalletGenerator.net Github</a>). Just try to explain clearly what is wrong and we will try to fix the bug as soon as possible.
           </p>
 
-          <h3 class="faqQuestion"><a class="faqLink" onclick="ninja.toggleFaqQuestion('faqQuestion9');">&#8226; I found a bug, what shall I do ?</a></h3>
+          <h3 class="faqQuestion"><a class="faqLink" onclick="ninja.toggleFaqQuestion('faqQuestion8');">&#8226; How can I help?</a></h3>
           <p class="faqAnswer" id="faqQuestion9">
-            You can report bugs using GitHub. You can also contact us using our Twitter account (<a href="http://twitter.com/WalletGenerator" target="_blank">@WalletGenerator</a>). Just try to explain clearly what is wrong and we will try to fix the bug as soon as possible.
-          </p>
-
-          <h3 class="faqQuestion"><a class="faqLink" onclick="ninja.toggleFaqQuestion('faqQuestion10');">&#8226; Who are you ?</a></h3>
-          <p class="faqAnswer" id="faqQuestion10">
-            We are just two random guy having fun with a side project.
-          </p>
-
-          <h3 class="faqQuestion"><a class="faqLink" onclick="ninja.toggleFaqQuestion('faqQuestion11');">&#8226; How can I help ?</a></h3>
-          <p class="faqAnswer" id="faqQuestion11">
-            Donation are always welcome, but you can also help us translate the website. It's really easy. Just add "?i18nextract=LANGUAGECODE" in the end of the url (for instance http://walletgenerator.net/?i18nextract=es for Spanish). You will see at the end of the page a pre-filled javascript array ready to be translated. Translate or correct it, and send it to us the way you prefer. Even partial translation are helpful !
+            Donations are always welcome, but you can also help us translate the website. It's really easy. Just add "?i18nextract=LANGUAGECODE" in the end of the url (for instance http://calc.komodo.services?i18nextract=es for Spanish). You will see at the end of the page a pre-filled javascript array ready to be translated. Translate or correct it, and submit a pull request on our github. Even partial translation are helpful !
           </p>
 
         </div>
@@ -10026,12 +10015,13 @@ Walletgenerator.net use the same security measures as the original project. All-
 
     <div id="footer" class="footer">
       <div>
-        <span class="item"><a href="https://github.com/MichaelMure/WalletGenerator.net" target="_blank" id="footerlabelgithub" class="i18n">Download (GitHub Repository)</a></span>
-        <span class="item"><a href="https://twitter.com/WalletGenerator">@WalletGenerator</a></span>
+        <span class="item"><a href="https://github.com/komodoservices/paperwallet" target="_blank" id="footerlabelgithub" class="i18n">Download (GitHub Repo)</a></span>
+        <span class="item"><a href="https://twitter.com/komodoservices">@KomodoServices</a></span>
       </div>
       <div class="copyright">
-        <span id="footerlabelcopyright1">Copyright WalletGenerator.net.</span>
-        <span id="footerlabelcopyright2" class="i18n">JavaScript copyrights are included in the source.</span>
+	<span id="footerlabelcopyright1">Copyright Komodo Services</span>
+        <span id="footerlabelcopyright2">Copyright WalletGenerator.net.</span>
+        <span id="footerlabelcopyright3" class="i18n">JavaScript copyrights are included in the source.</span>
         <span id="footerlabelnowarranty" class="i18n">No warranty.</span>
       </div>
     </div>
