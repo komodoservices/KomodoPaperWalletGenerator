@@ -1,6 +1,19 @@
-**** LOOKING FOR THE ZIP FILE TO DOWNLOAD ? ***********************************
-It's here: https://github.com/KomodoPlatform/KomodoPaperWalletGenerator/archive/master.zip
+**** KOMODO PAPERWALLET FILE TO DOWNLOAD  *************************************
+    [https://github.com/komodoservices/paperwallet/archive/master.zip](https://github.com/komodoservices/paperwallet/archive/master.zip)
 *******************************************************************************
+
+
+This tool allows you to generate Komodo and Assetchain addresses/private keys right in your browser. 
+
+Download from above or test it out at [http://paperwallet.komodo.services](http://paperwallet.komodo.services)
+
+
+By Komodo Services
+********************************************************************************
+
+This project is a fork of WalletGenerator.net! 
+
+
 
 Now crypto-currency wallets addresses and their corresponding private key can be conveniently generated in a web browser.
 
